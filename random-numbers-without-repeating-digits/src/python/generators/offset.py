@@ -6,7 +6,7 @@ runs of digits by design.
 import random
 
 
-def generate_number(length: int) -> str:
+def generate_number(length: int) -> (str, int):
     result = ""
     last_two_digits = [-1, -2]
 
@@ -26,4 +26,4 @@ def generate_number(length: int) -> str:
 
         result = result + str(digit)
 
-    return result
+    return (result, length)
