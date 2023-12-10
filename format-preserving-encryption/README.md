@@ -57,7 +57,23 @@ Properties:
 
 ## $\mathbb{Z}$ Ring
 
-We consider $S = \{0, \ldots, p-1$ with $p \geq n\}$ prime. $S$ is the multiplicative group module $p$. $\phi(i) = (a \cdot i + b) \mod p$, $0 < a,b < p$, is a bijection on $S$ **(WHY???)**.
+We consider $S = \{0, \ldots, p-1$ with $p \geq n\}$ prime. $S$ is the multiplicative group module $p$. $\phi(i) = (a \cdot i + b) \mod p$, $0 < a,b < p$, is a bijection on $S$.
+
+**Proof.** By contradiction. Let $n_1 < n_2 \in S$, but $f(n_1)=f(n_2)$. Then
+$$
+(a\cdot n_1 + b)\!\!\!\!\mod p = (a\cdot n_2 + b)\!\!\!\!\mod p.
+$$
+Since $n_1 < n_2$, there exists $k \in \mathbb{N}_{>0}$  such that
+$$
+\begin{align*}
+   & (a\cdot n_2 + b) - (a\cdot n_1 + b) \\
+=\ & a \cdot (n_2 - n_1) \\
+=\ & k \cdot p
+\end{align*}
+$$
+This implies that $a \cdot (n_2 - n_1)$ is divisible $p$. Then either $a$ or $n_2 - n_1$ must be divisible by $p$. The former contradicts the definition of $a$. The latter cannot be the case since $n_1 < n_2 \in S$ implies $n_2 - n_1 < p$.
+
+$\Box$
 
 In general, $n$ won't be prime, so $p > n$. This implies that for certain $i \in S$, $\phi(i) \geq n$ as well. This, however, is no problem. Since $f$ is bijective, we can iterate until we get a result $< n$.
 
