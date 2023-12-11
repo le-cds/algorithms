@@ -28,8 +28,11 @@ class ZRing:
 
 
 def main():
+    A = 8_139
+    B = 5_781
+    P = 10_007
     N = 10_000
-    zring = ZRing(8_139, 5_781, 10_007, N)
+    zring = ZRing(A, B, P, N)
 
     for i in range(N):
         print(zring.map(i))
